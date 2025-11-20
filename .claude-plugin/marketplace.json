@@ -1,0 +1,19 @@
+{
+  "name": "claude-linting",
+  "owner": {
+    "name": "Nico"
+  },
+  "description": "Linting and code quality plugins for Claude Code",
+  "plugins": [
+    {
+      "name": "linting",
+      "source": "./plugins/linting",
+      "description": "Auto-detects and runs project linting with safe fixes. Works with any ESLint setup."
+    },
+    {
+      "name": "antfu",
+      "source": "./plugins/antfu",
+      "description": "Enforces @antfu/eslint-config conventions: single quotes, 2-space indent, type-only imports"
+    }
+  ]
+}
