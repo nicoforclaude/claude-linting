@@ -1,14 +1,17 @@
 {
-  "PostToolUse": [
-    {
-      "matcher": "Edit",
-      "hooks": [
-        {
-          "type": "command",
-          "command": "${CLAUDE_PLUGIN_ROOT}/hooks/after-edit-lint.sh",
-          "timeout": 30
-        }
-      ]
-    }
-  ]
+  "description": "Auto-runs linting after file edits",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -ExecutionPolicy Bypass -File \"${CLAUDE_PLUGIN_ROOT}/hooks/after-edit-lint.ps1\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
 }

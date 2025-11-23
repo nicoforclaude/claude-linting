@@ -7,6 +7,7 @@ INPUT=$(cat)
 FILE_PATH=$(echo "$INPUT" | jq -r '.toolInput.file_path // empty')
 
 # Only .ts/.tsx/.js/.jsx files that exist
+
 [[ "$FILE_PATH" =~ \.(ts|tsx|js|jsx)$ ]] && [[ -f "$FILE_PATH" ]] || exit 0
 
 # Run ESLint with LAYOUT fixes only (cosmetic: spacing, semicolons, etc.)
