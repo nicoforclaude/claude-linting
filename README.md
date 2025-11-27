@@ -2,6 +2,17 @@
 
 Linting and code quality plugins for Claude Code.
 
+## Installation
+
+```bash
+# Install both plugins (for Antfu projects)
+claude plugin install nico-dev/claude-linting
+
+# Or install individual plugins
+claude plugin enable linting
+claude plugin enable antfu
+```
+
 ## Plugins
 
 ### 🧹 linting
@@ -38,17 +49,6 @@ Enforces @antfu/eslint-config conventions and patterns.
 **Skill:** `antfu:compliance`
 
 ---
-
-## Installation
-
-```bash
-# Install both plugins (for Antfu projects)
-claude plugin install nico-dev/claude-linting
-
-# Or install individual plugins
-claude plugin enable linting
-claude plugin enable antfu
-```
 
 ## Usage
 

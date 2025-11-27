@@ -28,7 +28,7 @@ Your call defines:
 ## Detection with Caching
 
 ### Cache Location
-`.claude/localData/cache/linter-setup.txt`
+`.localData/claude-plugins/nicoforclaude/linting/linter-setup.txt`
 
 ### Cache Format
 
