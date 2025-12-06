@@ -28,7 +28,11 @@ Your call defines:
 ## Detection with Caching
 
 ### Cache Location
+**Relative to current working directory (project root):**
 `.localData/claude-plugins/nicoforclaude/linting/linter-setup.txt`
+
+For example, if cwd is `C:\Repos\my-project`, the cache file is:
+`C:\Repos\my-project\.localData\claude-plugins\nicoforclaude\linting\linter-setup.txt`
 
 ### Cache Format
 
@@ -203,8 +207,8 @@ Filter for lintable extensions based on detected setup.
 
 **For projects with linting:**
 ```bash
-mkdir -p .claude/localData/cache
-cat > .claude/localData/cache/linter-setup.txt << EOF
+mkdir -p .localData/claude-plugins/nicoforclaude/linting
+cat > .localData/claude-plugins/nicoforclaude/linting/linter-setup.txt << EOF
 project_type: typescript-antfu
 package_manager: yarn
 lint_command: lint
@@ -218,8 +222,8 @@ EOF
 
 **For projects that skip linting:**
 ```bash
-mkdir -p .claude/localData/cache
-cat > .claude/localData/cache/linter-setup.txt << EOF
+mkdir -p .localData/claude-plugins/nicoforclaude/linting
+cat > .localData/claude-plugins/nicoforclaude/linting/linter-setup.txt << EOF
 project_type: root-commander
 skip_linting: true
 detected_at: $(date +%Y-%m-%d)
